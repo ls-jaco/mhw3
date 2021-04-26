@@ -1,0 +1,603 @@
+*{
+    box-sizing: border-box;
+    margin: 0px 0px;
+    padding: 0;
+    cursor: default;
+    font-family: "Bebas Neue", sans-serif;
+  }
+  
+  a {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: black;
+  }
+  
+  header {
+    background-image: url(./img/miles.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  
+  .titolo {
+    color: white;
+    font-size: 150px;
+    letter-spacing: 4px;
+    margin-right: 60px;
+  }
+  
+  .nav {
+    background-color: #28466bc7;
+    position: fixed;
+    color: white;
+    display: flex;
+    padding: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size:30px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+  }
+
+  .mobile__nav {
+    display: none;
+  }
+
+  #logo {
+    height: 50px;
+    width: 200px;
+  }
+  
+  header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  #links a {  
+    margin: 15px;
+  }
+  
+  section {
+    max-width: none;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 220px;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 150px;
+  
+  }
+
+  #showSearchLogo{
+    width: 100px;
+  }
+
+  #showsearch {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 0px;
+    margin-top: 50px;
+    position: absolute;
+    border-right: 2px solid #00000032;
+    background-color: #28466bc7;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+    max-width: 400px;
+    z-index: 4;
+  }
+
+
+  #div_api {
+    display: none;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 0px;
+    margin-top: 50px;
+    position: absolute;
+    border-right: 2px solid #00000032;
+    background-color: #28466b;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 15px;
+    width: 330px;
+    z-index: 4;
+    align-items: center;
+  }
+
+  #div_api img{
+    padding-top: 20px;
+  }
+
+  #div_api p{
+    font-size: 30px;
+  }
+
+  #div_api:focus{
+    outline: none;
+  }
+
+
+  .material-icons-outlined {
+    font-family: 'Material Icons';
+    font-size: 24px;  /* Preferred icon size */
+    color: #28466bc7;
+    cursor:pointer;
+    box-shadow: 0 0 10px #000000;
+    border-radius: 10px;
+    position: absolute;
+    top: 0px;
+    left: 300px;
+    background-color: white;
+  }
+
+  .material-icons-outlined:hover {
+    color: white;
+    background-color: #28466bc7;
+  }
+
+  #lastfm_search {
+    display: flex;
+    width: 300px;
+    background-color: white;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+  }
+
+  #submit {
+    background-color: white;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    cursor: pointer;
+  }
+
+  #submit:hover {
+    background: #28466b63;
+    color: white;
+  }
+
+  #submit:focus {
+    outline: none;
+  }
+
+  #showsearch:focus {
+    outline: none;
+  }
+
+  #ricerca {
+    margin: 150px 0 150px 0;
+  }
+
+  #container {
+    height: 80px;
+    box-sizing: border-box;
+    box-shadow: 0 0 10px #cecece;
+    max-width: 640px;
+    background: white;
+    justify-content: flex-start;
+    display: flex;
+    padding-left: 40px;
+    align-items: center;
+    line-height: 24px;
+    border-radius: 100px;
+    flex-basis: 100%;
+  }
+  
+  #ins {
+    font-size: 50px;
+    line-height: 50px;
+    color: #aaa;
+    flex-basis: 80%;
+    width: 100%;
+  }
+  
+  input[type=text] {
+    width: 90%;
+    display: flex;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    font-size: 42px;
+  }
+  
+  #container input[type=text]:focus {
+    transition: all 0.7s ease;
+    background-color: #28466b52;
+  }
+
+  .choice__grid-album{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+
+  .albumBoxClass {
+    columns: 2;
+    position:relative;
+    display: flex;
+    align-items:flex-end;
+    flex-direction: row;
+    padding: 30px;
+  }
+
+  .track_div_class {
+    padding: 20px;
+  }
+
+
+  .spotifyDivClass {
+    border-radius: 100px;
+    box-shadow: 0 0 10px #cecece;
+    width: 800px;
+    max-height: 400px;
+    overflow: auto;
+  }
+
+  #audio-player:focus {
+    outline: none;
+  }
+
+  .choice__grid-album img{ 
+    height: 300px;
+    width: 300px;
+    margin: 60px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .descriptionClass{
+    color: black;
+    font-size: 1.5em;
+    text-align: center;
+    display: none;
+    font-family: 'Open Sans', sans-serif;
+    word-spacing: 1px;
+    position: absolute;
+    background-color: #28466b;;
+    border-radius: 50px;
+    z-index: 5;
+    box-sizing: border-box;
+    padding: 20px;
+    float: left;
+    right: 800px;
+    width: 400px;
+    left: 20px
+  }
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-size: 24px;  /* Preferred icon size */
+    color: red;
+    cursor:pointer;
+    box-shadow: 0 0 10px #000000;
+    border-radius: 10px;
+    position: absolute;
+    background-color: white;
+    top: 100px;
+  }
+
+  .material-icons-canc {
+    font-family: 'Material Icons';
+    color: #28466B;
+    cursor:pointer;
+    border-radius: 10px;
+    position: absolute;
+    top: -10px;
+    right: -20px;
+  }
+
+
+  .material-icons:hover {
+    background-color: #28466b5e;
+  }
+
+  .fa-heart-broken:hover {
+    background-color: #28466b5e;
+  }
+
+  .favorites {
+    margin-top: 100px;
+    width: inherit;
+    border-top: 2px solid #00000032;
+  }
+  
+  #fav {
+    margin-top: 50px;
+    font-size: 42px;
+    padding-right: 1000px;
+  }
+
+  .favorites__grid{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+  }
+
+  .albumBoxFavorite {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px 50px 50px 50px;
+    position: relative;
+  }
+
+  .albumBoxFavorite img{
+    height: 300px;
+    width: 300px;
+    box-shadow: 0 0 10px #000000;
+    border-radius: 10px;
+    margin: 50px ;
+  }
+
+  .fa-heart-broken {
+    color: red;
+    font-size: 24px;
+    cursor:pointer;
+    box-shadow: 0 0 10px #000000;
+    border-radius: 10px;
+    position: absolute;
+    top: 75px;
+    right: 75px;
+    background-color: white;
+  }
+  
+  footer {
+    background-color: #28466B;
+    padding: 25px;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+  }
+  
+  @media (max-width: 750px) {
+  
+    header {
+      display: flex;
+      width: 100%;
+      align-items: center;
+    }
+  
+    header h1 strong {
+      font-size: 0.3em;
+      letter-spacing: 2px;
+    }
+  
+    #logo {
+        font-size: 1em;
+    }
+  
+  .nav {
+    background-color: #28466bc7;
+    position: fixed;
+    color: white;
+    display: flex;
+    padding: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size:30px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+  }
+
+    .nav-link {
+      display: none;
+    }
+
+    .mobile__nav {
+      display: block;
+    }
+
+    #mobile__links {
+      display: none;
+    }
+
+    .mobile__nav a {
+      color: white;
+      padding: 14px 16px;
+      text-decoration: none;
+      font-size: 17px;
+      display: block;
+    }
+
+    .mobile__nav a.icon__nav {
+      display: block;
+      font-size: 24px;
+      cursor:pointer;
+      box-shadow: 0 0 10px #000000;
+    }
+
+    .mobile__nav a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .active {
+      background-color: #ffffff;
+      color: white;
+    }
+  
+    .titolo {
+      font-size: 125px;
+      top: 30%;
+      margin-right: 0px;
+    }
+  
+    .choice__grid-album{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  
+    #showSearchLogo{
+      height: 50px;
+      width: 50px;
+    }
+
+
+
+    .albumBoxClass {
+      position:relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .spotifyDivClass{
+      width: 400px;
+    }
+  
+    .choice__grid-album img{ 
+      height: 300px;
+      width: 300px;
+      margin: 60px;
+      border-radius: 10px;
+      cursor: pointer;
+      position: relative;
+    }
+  
+    .descriptionClass{
+      color: black;
+      font-size: 1.5em;
+      text-align: center;
+      display: none;
+      font-family: 'Open Sans', sans-serif;
+      word-spacing: 1px;
+      position: absolute;
+      background-color: #466b5ed5;
+      border-radius: 50px;
+      z-index: 2;
+      box-sizing: border-box;
+      padding: 20px;
+    }
+  
+    .descriptionClass {
+      transition: ease 2s all;
+    }
+  
+  
+    .material-icons {
+      font-family: 'Material Icons';
+      font-size: 24px;  /* Preferred icon size */
+      color: red;
+      cursor:pointer;
+      box-shadow: 0 0 10px #000000;
+      border-radius: 10px;
+      position: absolute;
+      top: 75px;
+      right: 75px;
+      background-color: white;
+    }
+  
+    .material-icons-canc {
+      font-family: 'Material Icons';
+      color: #28466B;
+      cursor:pointer;
+      border-radius: 10px;
+      position: absolute;
+      top: -10px;
+      right: -20px;
+    }
+  
+    .fa-heart-broken {
+      color: red;
+      font-size: 24px;
+      cursor:pointer;
+      box-shadow: 0 0 10px #000000;
+      border-radius: 10px;
+      position: absolute;
+      top: 75px;
+      right: 75px;
+      background-color: white;
+    }
+  
+    .material-icons:hover {
+      background-color: #28466b5e;
+    }
+  
+    .fa-heart-broken:hover {
+      background-color: #28466b5e;
+    }
+  
+    .favorites {
+      width: inherit;
+      border-top: 2px solid #00000032;
+    }
+    
+    #fav {
+      margin-top: 50px;
+      font-size: 42px;
+      padding-right: 700px;
+      margin-top: 100px;
+      margin-left: 100px;
+    }
+  
+    .favorites__grid{
+      margin-top: 50px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: row;
+    }
+  
+    .albumBoxFavorite {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 0px 50px 50px 50px;
+      position: relative;
+    }
+  
+    .albumBoxFavorite img{
+      height: 300px;
+      width: 300px;
+      box-shadow: 0 0 10px #000000;
+      border-radius: 10px;
+      margin: 50px ;
+    }
+
+  
+  footer {
+    padding: 10px;
+   font-size: 2em;
+    margin-bottom: 0px;
+  }
+} 
